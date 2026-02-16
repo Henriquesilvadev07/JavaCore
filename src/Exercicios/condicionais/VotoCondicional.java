@@ -11,9 +11,12 @@ public class VotoCondicional {
         System.out.println("Digite sua idade para saber se ja pode votar: ");
         int idadeDigitada = sc.nextInt();
 
-        if (idadeDigitada >= idadeMinima) {
+        if (idadeDigitada >= 18) {
             System.out.println("Muito bem voce pode votar!!");
-        }else {
+        } else if (idadeDigitada >= 16 && idadeDigitada <= 17) {
+            System.out.println("O voto é opcional");
+        }else
+        {
             System.out.println("que pena! sua idade não permite que voce vote ainda");
         }
         sc.close();
